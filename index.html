@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cipher App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 Cipher App</h1>
+        <p class="subtitle">Encrypt and decrypt your messages</p>
+
+        <div class="card">
+
+            <!-- MODE -->
+            <label for="mode">Mode</label>
+
+            <select id="mode">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+
+
+            <!-- KEY -->
+            <label for="key">Secret key</label>
+
+            <div class="key-container">
+                <input
+                    type="password"
+                    id="key"
+                    placeholder="Enter your secret key"
+                >
+
+                <button id="showKey">👁️</button>
+            </div>
+
+
+            <!-- MESSAGE -->
+            <label for="message">Message</label>
+
+            <textarea
+                id="message"
+                placeholder="Write your message here..."
+            ></textarea>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button id="execute" class="primary">
+                    🔒 Encrypt
+                </button>
+
+                <button id="clear" class="secondary">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <label for="result">Result</label>
+
+            <div class="result-container">
+
+                <textarea
+                    id="result"
+                    readonly
+                    placeholder="Your result will appear here..."
+                ></textarea>
+
+                <button id="copy">📋 Copy</button>
+
+            </div>
+
+        </div>
+
+        <p class="warning">
+            ⚠️ This is a learning project and is not suitable for protecting
+            sensitive information.
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
